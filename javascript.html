@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<body> 
+    Nama: <i id="value_nama"></i>
+    <br>
+    Umur: <i id="value_umur"></i> tahun
+
+    <script> // wajib di dalam tag script (jika di luar dianggap kalimat biasa)
+
+        // String Variable
+        var nama = "Orin"; // nama : variabel, Orin : teks string
+
+        /*Number Variable*/
+        let umur = 19;
+
+        let tinggi = 157;
+
+        // Array
+        let makanan_favorit = ["Pisang", "Kentang", "Semangka"];
+
+        // console.log >>> menampilkan variabel nama ke dalam jendela console
+        console.log("Nama: " + nama);
+        console.log("Umur: " + umur);
+        console.log("Tinggi: " + tinggi + " cm"); // menggabungkan string dan variabel menggunakan +
+        console.log("Makanan favorit: " + makanan_favorit[2]); // indeks dimulai dari 0, sehingga pisang [0]
+
+        //Aritmatic Operations
+        let a = 15;
+        let b = 12.6;
+
+        let jumlah = a  +  b;
+        console.log("Hasil penjumlahan a & b: " + jumlah);
+
+        let kurang = a - b;
+        console.log("Hasil pengurangan a & b: " + kurang);
+
+        let kali = a * b;
+        console.log("Hasil perkalian a & b: " + kali);
+
+        let bagi = a / b;
+        console.log("Hasil pembagian a & b: " + bagi);
+
+        let sisa = a % b;
+        console.log("Hasil sisa pembagian a & b: " + sisa);
+
+        let pangkat = a ** 2;
+        console.log("Hasil pangkat a & b: " + pangkat);
+
+        // Conditional Statemens
+        let nilai = 47;
+
+        if (nilai >= 90) {
+            console.log("Nilai: A");
+        } else if (nilai >=80) {
+            console.log("Nilai: B")
+        } else if (nilai >=70) {
+            console.log("Nilai: C")
+        } else if (nilai >=60) {
+            console.log("Nilai: D")
+        } else {
+            console.log("Nilai: E")
+        }
+
+        // Looping
+        for (let i = 1; i <= 7; i ++) {// nilai awal i adalah 1, kemudian ada syarat i kurang dari sama dengan 7, dan terus bertambah 1 untuk setiap perulangan (dari 1 sampai 7)
+            console.log(i);
+        }
+
+        // Function >>>> penjumlahan: nama fungsi || a, b: parameter
+        function penjumlahan(a, b) { // tidak muncul di console, karena tida di panggil
+            return console.log("Hasil penjumlahan: " + (a + b));
+        }
+        // Memanggil fungsi penjumlahan
+        penjumlahan(10, 5); // ini memanggil fungsi penjumlahan agar tertampil di console
+
+        // Console itu tidak ditampilkan di web nya, tetapi hanya tertampil di bak
+
+        // Menampilkan nama ke halaman web (DOM)
+        document.getElementById("value_nama").innerHTML = nama;
+        // dokumen akan mencari elemen berdasarkan id dari value nama ke dalam html, yang id nya value nama yaitu Nama
+        // yang diganti jika ada perubahan nama adalah value dari variabel nama
+        document.getElementById("value_umur").innerHTML = umur;
+        // untuk menambahkan tahun diakhir angka umur itu menambahkan + tahun sebelum tutup titik koma >> umur + tahun;
+    </script>
+
+</body>
+
+</html>
